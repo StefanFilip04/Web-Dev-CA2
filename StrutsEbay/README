@@ -1,0 +1,65 @@
+my process of making this app
+its currently 13/12/2025 when starting this project
+
+make a website similar to ebay,
+no marks going for ui frontend
+
+need tomcat, 
+need "MVC java based web framework Struts2" ??
+
+i used my previous practice projet "StrutsCheckUser" as a base for this app.
+pages i need, that use sessions:
+
+user registration
+user login
+display whos logged in at all times
+user logoff
+
+(these dont use sessions)
+view my profile
+view others profile
+view all users
+
+add item for sale
+view all items for sale
+
+make a bid
+view my bids
+view all bids on an item
+
+-------------------------------
+mysql needs ebay_db
+
+user needs name and password
+items need name, price, seller_id (foreign key to users)
+
+users need to put up items for sale then
+bid on items and for their ones to display too...
+
+
+
+create table users (
+  user_id int primary key auto_increment,
+  username varchar(50) unique not null,
+  password varchar(50) not null,
+);
+
+/look over this later, i need more stuff i think/
+create table items (
+  item_id int primary key auto_increment,
+  item_name varchar(100) not null,
+  item_price decimal(10,2) not null,
+  foreign key (seller_id) references users(user_id)
+);
+
+
+------------------------
+/key things im learning/
+
+difference between .jsp and .html
+
+JSP is a dynamic server side file that runs java code and goes 
+through tomcat first to be processed then back to webpage
+can contain: java code, JSP tags, html
+
+html is static and just displays content as is
