@@ -8,8 +8,8 @@ need tomcat,
 need "MVC java based web framework Struts2" ??
 
 i used my previous practice projet "StrutsCheckUser" as a base for this app.
-pages i need, that use sessions:
-
+[PAGES] i need, that use sessions:
+-------------------------------
 user registration
 user login
 display whos logged in at all times
@@ -61,5 +61,6 @@ difference between .jsp and .html
 JSP is a dynamic server side file that runs java code and goes 
 through tomcat first to be processed then back to webpage
 can contain: java code, JSP tags, html
+
 
 html is static and just displays content as is
