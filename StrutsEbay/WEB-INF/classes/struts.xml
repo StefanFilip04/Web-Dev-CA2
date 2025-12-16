@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.extension" value="action" />
+    
+    <package name="default" extends="struts-default" namespace="">
+        
+        <action name="login" class="SessionExample" method="login">
+            <result name="success">home.jsp</result>
+            <result name="error">fail.jsp</result>
+        </action>
+        
+        <action name="register" class="SessionExample" method="register">
+            <result name="success">home.jsp</result>
+            <result name="error">fail.jsp</result>
+        </action>
+        
+        <action name="logout" class="SessionExample" method="logout">
+            <result name="success">index.jsp</result>
+        </action>
+
+
+
+
+
+        <action name="addItem" class="Items" method="addItem">
+            <result name="success">home.jsp</result>
+            <result name="error">fail.jsp</result>
+        </action>
+        
+        <action name="viewAllItems" class="Items" method="getItems">
+            <result name="success">viewItems.jsp</result>
+        </action>
+        
+
+
+
+
+        <action name="viewMyProfile" class="Profiles" method="getProfile">
+            <result name="success">viewProfile.jsp</result>
+        </action>
+
+        <action name="viewAllUsers" class="Profiles" method="getUsers">
+            <result name="success">viewUsers.jsp</result>
+        </action>
+        
+        <action name="viewUserProfile" class="Profiles" method="viewUserProfile">
+            <result name="success">viewProfile.jsp</result>
+            <result name="error">fail.jsp</result>
+        </action>
+        
+    </package>
+</struts>

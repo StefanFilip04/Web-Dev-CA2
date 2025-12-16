@@ -1,42 +1,27 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<!-- tag library -->
-<%@taglib uri="/struts-tags" prefix="s" %> 
+<%@taglib uri="/struts-tags" prefix="s" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>My First Struts2 Web app</title>
+        <title>Login / Register</title>
     </head>
     <body>
-	
-
-        <s:form action="register" >
-            <br> REGISTER 
-            <br> Enter your username here <s:textfield name="userName" label ="Username" />
-			<br> Enter your password here <s:textfield name="password" label="Password"/>
-            <s:submit />
-        </s:form>
-
+        <h2>Login / Register</h2>
         
-        <s:form action="createNewUser" >
-            <br> CREATE NEW USER
-            <br> Enter your username here <s:textfield name="userName" label="Username"/>
-			<br> Enter your password here <s:textfield name="password" label="Password"/>
-            <s:submit />
+        Login
+        <s:form action="login">
+            <s:textfield name="username" label="Username" /><br>
+            <s:password name="password" label="Password" /><br>
+            <s:submit value="Login" />
         </s:form>
-		
+        
+        Register
+        <s:form action="register">
+            <s:textfield name="username" label="New Username" /><br>
+            <s:password name="password" label="New Password" /><br>
+            <s:submit value="Register" />
+        </s:form>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
